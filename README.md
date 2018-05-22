@@ -6,13 +6,13 @@ This is the main data source, manual searchable UK Gov portal (beta, no API, Ope
 
 # Current feasibility-tested hack question set
 
-###TEXT ANALYSIS - (Correlation between GPG data and another source of text data at company level):
+### TEXT ANALYSIS - (Correlation between GPG data and another source of text data at company level):
 * Recruitment bias in senior roles (data source: Reed)
 * Company ‘self’ description (data source: Reed)
 * Action plans as described in Company GPG reports (source links in the GPG company page)
 * Twitter #PayGap (company Level?)
 
-###THE CEO QUESTION:
+### THE CEO QUESTION:
 * Composition of the board (sources: Company House or company’s website)
 * Gender of the CEO (sources: Company House or company’s website)
 
@@ -45,6 +45,6 @@ _BMJ 2018; 361 doi: https://doi.org/10.1136/bmj.k1541 (Published 09 April 2018)_
 ### Recruitment Bias > Accessibility / Awareness / Perfect Information
 * WHERE are jobs, particularly the higher paid ones, advertised? ARE they even fully advertised? i.e. biased reach, closed networks
 
-### A pseudo-Bechdel Test for detecting/identifying discrimination
+### A pseudo-Bechdel Test for detecting/identifying organisational gender bias
 
 ----
