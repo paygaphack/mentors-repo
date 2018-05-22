@@ -13,3 +13,9 @@ Feel free to make directories/drop notes/scripts/docs etc. that you think would 
 * https://www.bmj.com/content/361/bmj.k1541
 > With over 1.6 million staff, the NHS is the largest single employer in the UK, three times the size of the largest private sector employer, Tesco...The new requirement for large employers to publish basic data shows the scale of the discrepancy in the NHS...
 _BMJ 2018; 361 doi: https://doi.org/10.1136/bmj.k1541 (Published 09 April 2018)_
+
+
+### Recruitment Bias > Accessibility / Awareness / Perfect Information
+* WHERE are jobs, particularly the higher paid ones, advertised? ARE they even fully advertised?
+
+### A pseudo-Bechdel Test for detecting/identifying discrimination
