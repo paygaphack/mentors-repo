@@ -2,7 +2,8 @@
 
 Feel free to make directories/drop notes/scripts/docs etc. that you think would be useful/interesting for the June Hack! :nerd_face:
 
-This is the main data source, manual searchable UK Gov portal (beta, no API, Open Government License): https://gender-pay-gap.service.gov.uk/
+This is the main data source, manual searchable UK Gov portal (beta, no API, Open Government License):   
+> https://gender-pay-gap.service.gov.uk/
 
 # Current feasibility-tested hack question set
 
