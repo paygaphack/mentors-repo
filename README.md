@@ -39,7 +39,7 @@ This is the main data source, manual searchable UK Gov portal (beta, no API, Ope
 
 #### The gender pay gap in the NHS 
 * https://www.bmj.com/content/361/bmj.k1541
-> With over 1.6 million staff, the NHS is the largest single employer in the UK, three times the size of the largest private sector employer, Tesco...The new requirement for large employers to publish basic data shows the scale of the discrepancy in the NHS...
+* `With over 1.6 million staff, the NHS is the largest single employer in the UK, three times the size of the largest private sector employer, Tesco...The new requirement for large employers to publish basic data shows the scale of the discrepancy in the NHS...`
 _BMJ 2018; 361 doi: https://doi.org/10.1136/bmj.k1541 (Published 09 April 2018)_
 
 #### Recruitment Bias > Accessibility / Awareness / Perfect Information
