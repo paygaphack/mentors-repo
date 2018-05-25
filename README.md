@@ -5,6 +5,9 @@ Feel free to make directories/drop notes/scripts/docs etc. that you think would 
 This is the main data source, manual searchable UK Gov portal (beta, no API, Open Government License):   
 > https://gender-pay-gap.service.gov.uk/
 
+Other data sources we've identified & assessed for ease of access/relevance
+> https://docs.google.com/spreadsheets/d/15dAZU3_t0mA2fX5WNxZToTVz0_PhTV7HAjG8lCZUezQ/edit#gid=0 
+
 # Current feasibility-tested hack question set
 
 ### TEXT ANALYSIS - (Correlation between GPG data and another source of text data at company level):
