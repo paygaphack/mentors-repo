@@ -10,7 +10,7 @@ Proposals for computing infrastructure to use during the PayGap hackathon.
 4. Where will the final results of the project be stored? Github or another service? What format should the final presentation be in?
 
 ## Colaboratory
-(Colaboratory)[https://colab.research.google.com] is an interactive, browser-based computing environment that supports Python 2 and Python 3 and also provides free GPU time. 
+[Colaboratory](https://colab.research.google.com) is an interactive, browser-based computing environment that supports Python 2 and Python 3 and also provides free GPU time. 
 
 Pros:
 * can connect to a user's Google Drive
@@ -25,7 +25,7 @@ Cons:
 
 ## mybinder.org
 
-(MyBinder)[https://mybinder.org/] computing environment that creates a Jupyter notebook from a Github repo
+[MyBinder](https://mybinder.org/) computing environment that creates a Jupyter notebook from a Github repo
 
 Pros:
 * can create a computing environment based on a Github repo - so there is no need for each user to install packages using package manager separately 
