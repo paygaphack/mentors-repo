@@ -17,9 +17,7 @@ API_KEY = os.getenv('API_KEY')
 base_url = 'https://newsapi.org/v2/everything'
 params = {
     'q': 'pay gap',
-    'apiKey': API_KEY,
-    'pageSize': 20,
-    'page': 1
+    'apiKey': API_KEY
 }
 
 # Get data from News API with the parameters set above
