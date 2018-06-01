@@ -2,11 +2,11 @@
 
 ## Introduction
 
-In this section of the GenderPayGapHack, we explore the media coverage of gender paygap.
+In this section of the GenderPayGapHack, we explore the media coverage of gender pay gap.
 
 [News API](https://newsapi.org/) is an amazing source of information as it provides a single API that exposes breaking news headlines and older articles from over 3,000 news sources and blogs!
 
-You can sign up to a free developer plan which allows 1,000 requets per day (with a limit of 250 requests per every 6 hours). This should be more than enough for the day of the hack. However, please be aware that it is possible to accidentally exceed the limit, e.g. by entering an infinite loop whilst making batch requests.
+You can [sign up here](https://newsapi.org/account) to a free developer plan which allows you to make 1,000 requets per day (with a limit of 250 requests per every 6 hours). This should be more than enough for you to play around on the day of the hack. However, please be aware that it _is_ possible to accidentally exceed the limit, e.g. by entering an infinite loop whilst making batch requests.
 
 ## Instructions
 
@@ -14,7 +14,7 @@ You can sign up to a free developer plan which allows 1,000 requets per day (wit
 
 Mentors of the GenderPayGapHack joined force, analysed a large number of APIs, hand-picked ones that suited out purpose and have collected ready-to-use dataset in a form of JSON.
 
-In case of News API, you can find it in [`news_api_data.txt`](./news_api_data.txt) - click the file name and it will take you to the file itself. You're welcome to download the file and explore the data. For a detailed explanation of the data structure, how to load the data from the file etc., pelase see the section [Working with the Data](#working-with-the-data).
+In case of News API, we collected news articles and blog posts that contain the words `pay gap`, sorted by the newest pieces. The exact query used to collect this data can be found in [`generate_data.py`](./generate_data.py) and you can find the data in [`news_api_data.txt`](./news_api_data.txt) - click the file name and it will take you to the file itself. You're welcome to download the file and explore the data. For a detailed explanation of the data structure, how to load the data from the file etc., pelase see the section [Working with the Data](#working-with-the-data).
 
 ### Option 2: Run a script to collect additional data
 
@@ -28,18 +28,18 @@ You can also use the script [`custom_query.py`](./custom_query.py) provided to m
 4. Activate the virtual enviromnent just created: `$ source venv/bin/activate`
 5. Install dependencies: `$ pip install -r requirements.txt`
 6. Obtain a unique API key from [newsapi.org](https://newsapi.org/)
-7. Create a `.env` file _within_ the `news-api` directory - it won't work otherwise!
+7. Create a `.env` file _within_ the `news-api` directory - it won't work otherwise, unless you manually change the path to the `.env` file by modifying the `env_path` variable in `custom_query.py`!
     The file structure should look something like the diagram below.
 
     ```
-    mentors-repo
+    mentors-repo  <-- Project root
     │   README.md
     │   LICENSE
-    │   .gitignore  <-- any .env files are ignored here
+    │   .gitignore  <-- Any .env files are ignored here
     │   ...
     │
     └─── news-api
-    │        .env  <-- here, not anywhere else!
+    │        .env  <-- Here, not anywhere else!
     │        README.md
     │        custom_query.py
     │        generate_data.py
@@ -92,13 +92,11 @@ The default parameters in `custom_query.py` are below. You can add/remove parame
 
 params = {
     'q': 'pay gap',
-    'apiKey': API_KEY,
-    'pageSize': 20,
-    'page': 1
+    'apiKey': API_KEY
 }
 ```
 
-For each endpoint, there are a range of additional parameters you can specify, such as `sources`, `from`, `to`, `language`, `sortBy` etc. For example, for the list of parameters available for the `/everything` endpoint, check out the 'Request parameters' section on [News API Everything](https://newsapi.org/docs/endpoints/everything).
+For each endpoint, there are a range of additional parameters you can specify, such as `pageSize`, `sources`, `from`, `to`, `language`, `sortBy` etc. For example, for the list of parameters available for the `/everything` endpoint, check out the 'Request parameters' section on [News API Everything](https://newsapi.org/docs/endpoints/everything).
 
 ## Working with the Data
 
@@ -134,10 +132,13 @@ The typical JSON response from News API looks like this:
             "url": "https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/avivahwittenbergcox/2018/05/06/turning-paygaps-into-potential/&ss=business&refURL=https://t.co/dbd29f1cbc&referrer=https://t.co/dbd29f1cbc",
             "urlToImage": null,
             "publishedAt": "2018-05-06T20:27:00Z"
-        }
+        },
+        ...
     ]
 }
 ```
+
+The exact structure of the JSON data is described in the 'Response object' section on [News API Everything](https://newsapi.org/docs/endpoints/everything).
 
 ### 2. Loading data from a text file
 
@@ -155,7 +156,11 @@ with open('news-api.txt','r') as file:
 Now you can access each field as follows - the below uses `python-dateutil` package to parse the `publishedAt` attribute which is in ISO 8601 format.
 
 ```python
+import json
 import dateutil.parser
+
+with open('news-api.txt','r') as file:
+    data = json.load(file)
 
 for article in data['articles']:
     published_datetime = dateutil.parser.parse(article['publishedAt'])
