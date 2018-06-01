@@ -18,9 +18,9 @@ PAGE_SIZE = 100
 # Construct base_url and parameters to send
 base_url = 'https://newsapi.org/v2/everything'
 params = {
-    'q': 'pay gap',
+    'q': 'gender pay gap',
     'apiKey': API_KEY,
-    'sortBy': 'publishedAt'
+    'sortBy': 'publishedAt',
     'pageSize': PAGE_SIZE,
     'page': 1,
 }
