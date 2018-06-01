@@ -20,8 +20,9 @@ base_url = 'https://newsapi.org/v2/everything'
 params = {
     'q': 'pay gap',
     'apiKey': API_KEY,
+    'sortBy': 'publishedAt'
     'pageSize': PAGE_SIZE,
-    'page': 1
+    'page': 1,
 }
 
 # Get the first set of data from News API with the parameters set above
@@ -33,8 +34,6 @@ data = response.json()
 # Calculate total number of pages to paginate through
 total_results = data['totalResults']
 
-print('pageSize: ', len(data['articles']))
-
 if total_results <= 100:
     total_pages = 1
 elif total_results % PAGE_SIZE == 0:
@@ -45,7 +44,7 @@ else:
 print('Total number of pages to paginate: ', total_pages, '\n')
 current_page = 1
 
-# Grab the rest of the articles
+# Grab the rest of the articles by paginating 100 articles at a time
 while current_page < total_pages:
     # Increment current_page and set it to the page param
     current_page += 1
