@@ -16,25 +16,29 @@ API_KEY = os.getenv('API_KEY')
 # Construct base_url and parameters to send
 base_url = 'https://newsapi.org/v2/everything'
 params = {
-    'q': 'paygap',
-    'apiKey': API_KEY
+    'q': 'pay gap',
+    'apiKey': API_KEY,
+    'pageSize': 20,
+    'page': 1
 }
 
 # Get data from News API with the parameters set above
 response = requests.get(base_url, params=params)
 
-# Save the JSON representation of the response data into a file
-with open('response.txt', 'w') as file:
-    json.dump(response.json(), file, indent=4)
+# Extract the JSON representation of the response data
+data = response.json()
+print(len(data['articles']), 'articles found!')
 
-# Load JSON data
-with open('response.txt','r') as file:
+# Save the JSON representation of the response data into a file
+with open('data.txt', 'w') as file:
+    json.dump(data, file, indent=4)
+
+# Load the JSON data
+with open('data.txt','r') as file:
     data = json.load(file)
 
-# Print the data
-print(json.dumps(data, indent=4))
-
 # Access information within the data - showing first 5 for demo purposes
+print('Displaying information on the first 5 articles...')
 for article in data['articles'][:5]:
     published_datetime = dateutil.parser.parse(article['publishedAt'])
 
