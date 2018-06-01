@@ -67,5 +67,7 @@ print('\nTotal number of articles obtained: ', len(data['articles']))
 print('\nSaving the data into a file...')
 
 # Save the data into a file
-with open('news-api.txt', 'w') as file:
+with open('news_api_data.txt', 'w') as file:
     json.dump(data, file, indent=4)
+
+print('\nData saved as news_api_data.txt!')
