@@ -188,6 +188,7 @@ URL:  https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/
 ### Misa Ogura
 
 Software Engineer @ [BBC R&D](https://www.bbc.co.uk/rd/blog)
+
 Organiser @ [AI Club for Gender Minorities](https://www.meetup.com/en-AU/ai-club/)
 
 [Github](https://github.com/MisaOgura) | [Twitter](https://twitter.com/misa_ogura) | [Medium](https://medium.com/@misaogura/latest)
