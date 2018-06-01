@@ -160,7 +160,7 @@ Here is an example of how you can load the file as a JSON object in Python.
 ```python
 import json
 
-with open('news-api.txt','r') as file:
+with open('news_api_data.txt','r') as file:
     data = json.load(file)
 ```
 
@@ -172,7 +172,7 @@ Now you can access each field as follows - the below uses `python-dateutil` pack
 import json
 import dateutil.parser
 
-with open('news-api.txt','r') as file:
+with open('news_api_data.txt','r') as file:
     data = json.load(file)
 
 for article in data['articles']:
