@@ -69,7 +69,7 @@ You can also use the script [`custom_query.py`](./custom_query.py) provided to m
 
 #### Customising a query
 
-##### Endpoints
+#### Endpoints
 
 By default, `custom_query.py` makes a request to `/everthing` endpoint of News API. They provide two additional endpoints `/top-headlines` and `/sources`. [News API Endpoints](https://newsapi.org/docs/endpoints) explains what each endpoint provides.
 
@@ -81,7 +81,7 @@ You can change the endpoint to query by editing `base_url` variable inside `cust
 base_url = 'https://newsapi.org/v2/everything'
 ```
 
-##### Parameters
+#### Parameters
 
 You can also customise a query by changing parameters - this is where things get really exciting! So I encourage you to play around with it.
 
