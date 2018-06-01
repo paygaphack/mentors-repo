@@ -121,7 +121,7 @@ The typical JSON response from News API looks like this:
 ```json
 {
     "status": "ok",
-    "totalResults": 19,
+    "totalResults": 2,
     "articles": [
         {
             "source": {
@@ -146,8 +146,7 @@ The typical JSON response from News API looks like this:
             "url": "https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/avivahwittenbergcox/2018/05/06/turning-paygaps-into-potential/&ss=business&refURL=https://t.co/dbd29f1cbc&referrer=https://t.co/dbd29f1cbc",
             "urlToImage": null,
             "publishedAt": "2018-05-06T20:27:00Z"
-        },
-        ...
+        }
     ]
 }
 ```
@@ -202,7 +201,7 @@ URL:  https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/
 ...
 ```
 
-## 4. Contrinutions
+## 4. Contributions
 
 Please feel free to raise issues or pull requests if you see the room for improvement!
 
