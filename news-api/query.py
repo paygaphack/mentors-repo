@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+import dateutil.parser
 
 from dotenv import load_dotenv
 from pathlib import Path
@@ -23,12 +24,23 @@ params = {
 response = requests.get(base_url, params=params)
 
 # Save the JSON representation of the response data into a file
-with open('news-api.txt', 'w') as file:
+with open('response.txt', 'w') as file:
     json.dump(response.json(), file, indent=4)
 
 # Load JSON data
-with open('news-api.txt','r') as file:
+with open('response.txt','r') as file:
     data = json.load(file)
 
 # Print the data
 print(json.dumps(data, indent=4))
+
+# Access information within the data - showing first 5 for demo purposes
+for article in data['articles'][:5]:
+    published_datetime = dateutil.parser.parse(article['publishedAt'])
+
+    print('\n')
+    print('Source: ', article['source']['name'])
+    print('Title: ', article['title'])
+    print('Written by: ', article['author'])
+    print('Published at:', published_datetime)
+    print('URL: ', article['url'])

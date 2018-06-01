@@ -10,7 +10,7 @@
             "author": "Avivah Wittenberg-Cox, Contributor, Avivah Wittenberg-Cox, Contributor https://www.forbes.com/sites/avivahwittenbergcox/",
             "title": "Turning #PayGaps into #Potential",
             "description": "The UK legislates #PayGap reporting requirements while PEW Research publishes a new report about the #PromotionGap in the US. The push is on to #GenderBalance business.",
-            "url": "https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/avivahwittenbergcox/2018/05/06/turning-paygaps-into-potential/&refURL=https://t.co/e7844fec73&referrer=https://t.co/e7844fec73",
+            "url": "https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/avivahwittenbergcox/2018/05/06/turning-paygaps-into-potential/&ss=business&refURL=https://t.co/dbd29f1cbc&referrer=https://t.co/dbd29f1cbc",
             "urlToImage": null,
             "publishedAt": "2018-05-06T20:27:00Z"
         },
@@ -22,7 +22,7 @@
             "author": "Avivah Wittenberg-Cox, Contributor, Avivah Wittenberg-Cox, Contributor https://www.forbes.com/sites/avivahwittenbergcox/",
             "title": "Turning #PayGaps into #Potential",
             "description": "The UK legislates #PayGap reporting requirements while PEW Research publishes a new report about the #PromotionGap in the US. The push is on to #GenderBalance business.",
-            "url": "https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/avivahwittenbergcox/2018/05/06/turning-paygaps-into-potential/&ss=business&refURL=https://t.co/dbd29f1cbc&referrer=https://t.co/dbd29f1cbc",
+            "url": "https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/avivahwittenbergcox/2018/05/06/turning-paygaps-into-potential/&refURL=https://t.co/e7844fec73&referrer=https://t.co/e7844fec73",
             "urlToImage": null,
             "publishedAt": "2018-05-06T20:27:00Z"
         },
@@ -88,18 +88,6 @@
         },
         {
             "source": {
-                "id": null,
-                "name": "Business-standard.com"
-            },
-            "author": "Reuters",
-            "title": "HSBC has worst gender pay gap among Britain's largest companies",
-            "description": "The next largest gender pay gaps were at Virgin Atlantic, where men received 58 percent more on average more than women",
-            "url": "http://www.business-standard.com/article/international/hsbc-has-worst-gender-pay-gap-among-britain-s-largest-companies-118040401382_1.html",
-            "urlToImage": "http://bsmedia.business-standard.com/_media/bs/img/article/2015-02/23/full/1424688029-5647.jpg",
-            "publishedAt": "2018-04-04T17:20:00Z"
-        },
-        {
-            "source": {
                 "id": "reuters",
                 "name": "Reuters"
             },
@@ -121,6 +109,18 @@
             "url": "https://www.cnbc.com/2018/04/04/hsbc-has-worst-gender-pay-gap-among-britains-largest-companies.html",
             "urlToImage": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/04/04/105109257-GettyImages-615778882.1910x1000.jpg",
             "publishedAt": "2018-04-04T17:05:00Z"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Business-standard.com"
+            },
+            "author": "Reuters",
+            "title": "HSBC has worst gender pay gap among Britain's largest companies",
+            "description": "The next largest gender pay gaps were at Virgin Atlantic, where men received 58 percent more on average more than women",
+            "url": "http://www.business-standard.com/article/international/hsbc-has-worst-gender-pay-gap-among-britain-s-largest-companies-118040401382_1.html",
+            "urlToImage": "http://bsmedia.business-standard.com/_media/bs/img/article/2015-02/23/full/1424688029-5647.jpg",
+            "publishedAt": "2018-04-04T17:20:00Z"
         },
         {
             "source": {
