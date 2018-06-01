@@ -184,19 +184,22 @@ for article in data['articles']:
     print('Written by: ', article['author'])
     print('Published at:', published_datetime)
     print('URL: ', article['url'])
+```
 
->>>
-Source:  Forbes.com
-Title:  Turning #PayGaps into #Potential
-Written by:  Avivah Wittenberg-Cox, Contributor, Avivah Wittenberg-Cox, Contributor https://www.forbes.com/sites/avivahwittenbergcox/
-Published at: 2018-05-06 20:27:00+00:00
-URL:  https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/avivahwittenbergcox/2018/05/06/turning-paygaps-into-potential/&ss=business&refURL=https://t.co/dbd29f1cbc&referrer=https://t.co/dbd29f1cbc
+Console output:
 
-Source:  Forbes.com
-Title:  Turning #PayGaps into #Potential
-Written by:  Avivah Wittenberg-Cox, Contributor, Avivah Wittenberg-Cox, Contributor https://www.forbes.com/sites/avivahwittenbergcox/
-Published at: 2018-05-06 20:27:00+00:00
-URL:  https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/avivahwittenbergcox/2018/05/06/turning-paygaps-into-potential/&refURL=https://t.co/e7844fec73&referrer=https://t.co/e7844fec73
+```bash
+Source:  Tlnt.com
+Title:  The Gender Pay Gap Is Also an Opportunity Gap
+Written by:  Jingcong Zhao
+Published at: 2018-05-17 17:55:33+00:00
+URL:  https://www.tlnt.com/the-gender-pay-gap-is-also-an-opportunity-gap/
+
+Source:  Www.gov.uk
+Title:  Transparency data: UKAEA Gender Pay Gap Report 2017
+Written by:  None
+Published at: 2018-04-04 13:52:13+00:00
+URL:  https://www.gov.uk/government/publications/ukaea-gender-pay-gap-report-2017
 
 ...
 ```
