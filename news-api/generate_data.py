@@ -14,60 +14,74 @@ API_KEY = os.getenv('API_KEY')
 
 # Set some constants
 PAGE_SIZE = 100
+BASE_URL = 'https://newsapi.org/v2/everything'
 
-# Construct base_url and parameters to send
-base_url = 'https://newsapi.org/v2/everything'
-params = {
-    'q': 'gender pay gap',
-    'apiKey': API_KEY,
-    'sortBy': 'publishedAt',
-    'pageSize': PAGE_SIZE,
-    'page': 1,
-}
+def run():
+    # Construct parameters to send
+    params = {
+        'q': 'gender pay gap',
+        'language': 'en',
+        'apiKey': API_KEY,
+        'sortBy': 'publishedAt',
+        'pageSize': PAGE_SIZE,
+        'page': 1,
+    }
 
-# Get the first set of data from News API with the parameters set above
-response = requests.get(base_url, params=params)
+    # Get the first set of data from News API with the parameters set above
+    print('\nGrabbing the first page...')
+    response = requests.get(BASE_URL, params=params)
 
-# Extract the JSON representation of the response data
-data = response.json()
+    # Printing status for debugging
+    print('Received a response with status code: ', response.status_code)
 
-# Calculate total number of pages to paginate through
-total_results = data['totalResults']
+    # Extract the JSON representation of the response data
+    data = response.json()
 
-if total_results <= 100:
-    total_pages = 1
-elif total_results % PAGE_SIZE == 0:
-    total_pages = total_results / PAGE_SIZE
-else:
-    total_pages = int(total_results / PAGE_SIZE) + 1
+    # Calculate total number of pages to paginate through
+    total_results = data['totalResults']
+    total_pages = calculate_total_pages(PAGE_SIZE, total_results)
+    print('Total number of pages to paginate: ', total_pages, '\n')
 
-print('Total number of pages to paginate: ', total_pages, '\n')
-current_page = 1
+    # Grab the rest of the articles by paginating 100 articles at a time
+    current_page = 1
+    while current_page < total_pages:
+        # Increment current_page and set it to the page param
+        current_page += 1
+        params['page'] = current_page
 
-# Grab the rest of the articles by paginating 100 articles at a time
-while current_page < total_pages:
-    # Increment current_page and set it to the page param
-    current_page += 1
-    params['page'] = current_page
+        # Obtain next page from the API
+        print('\nGrabbing page: ', current_page, '...')
+        response = requests.get(PAGE_SIZE, params=params)
 
-    # Obtain next page from the API
-    print('Grabbing page: ', current_page, '...')
-    response = requests.get(base_url, params=params)
-    new_data = response.json()
+        # Printing status for debugging
+        print('Received a response with status code: ', response.status_code)
 
-    if 'articles' not in new_data:
-        break
+        # Breaks out from the while loop if the request fails
+        new_data = response.json()
+        if 'articles' not in new_data:
+            break
 
-    new_articles = new_data['articles']
+        # Merge new articles to the obtained list of articles
+        new_articles = new_data['articles']
+        data['articles'].extend(new_articles)
 
-    # Merge new articles to the obtained list of articles
-    data['articles'].extend(new_articles)
+    print('\nTotal number of articles obtained: ', len(data['articles']))
 
-print('\nTotal number of articles obtained: ', len(data['articles']))
-print('\nSaving the data into a file...')
+    # Save the data into a file
+    print('\nSaving the data into a file...')
+    with open('news_api_data.txt', 'w') as file:
+        json.dump(data, file, indent=4)
+    print('\nData saved as news_api_data.txt!')
 
-# Save the data into a file
-with open('news_api_data.txt', 'w') as file:
-    json.dump(data, file, indent=4)
 
-print('\nData saved as news_api_data.txt!')
+def calculate_total_pages(page_size, total_results):
+    if total_results <= 100:
+        return 1
+    elif total_results % PAGE_SIZE == 0:
+        return total_results / PAGE_SIZE
+    else:
+        return int(total_results / PAGE_SIZE) + 1
+
+
+if __name__ == '__main__':
+    run()
