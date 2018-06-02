@@ -2,19 +2,19 @@
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-2. [Instructions](#2-instructions)
+1. [Introduction](#one-introduction)
+2. [Instructions](#two-instructions)
     - Option 1 - Use the dataset prepared by GenderPayGap mentors
     - Option 2 - Run a script to collect additional data
         - Preparing your local environment
         - Customising a query - endpoint
         - Customising a query - parameters
-3. [Working with the Data](#3-working-with-the-data)
+3. [Working with the Data](#three-working-with-the-data)
     - Data structure
     - Loading data from a text file
     - Access information within the data
-4. [Contributions](#4-contributions)
-5. [Curated By](#5-curated-by)
+4. [Contributions](#four-contributions)
+5. [Curated By](#five-curated-by)
 
 ## :one: Introduction
 
