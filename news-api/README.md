@@ -14,7 +14,7 @@
     - Loading data from a text file
     - Access information within the data
 4. [Contributions](#four-contributions)
-5. [Curated By](#five-curated-by)
+5. [Authour](#five-authour)
 
 ## :one: Introduction
 
@@ -218,7 +218,7 @@ URL:  https://www.gov.uk/government/publications/ukaea-gender-pay-gap-report-201
 
 Please feel free to raise issues or pull requests as you see room for improvement :pray:
 
-## :five: Curated By
+## :five: Authour
 
 ### Misa Ogura
 
