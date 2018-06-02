@@ -9,7 +9,7 @@ with open('news_api_data.txt','r') as file:
 print('\nLoaded ', len(data['articles']), ' articles')
 
 # Access information within the data - showing first 5 for demo purposes
-print('Displaying information on the first 5 articles...')
+print('\nDisplaying information on the first 5 articles...')
 for article in data['articles'][:5]:
     published_datetime = dateutil.parser.parse(article['publishedAt'])
 
