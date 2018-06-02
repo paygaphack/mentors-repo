@@ -124,7 +124,7 @@ For each endpoint, there are a range of additional parameters you can specify, s
 
 ## :three: Working with the Data
 
-### Data structure :page_with_curl:
+### :page_with_curl: Data structure
 
 The typical JSON response from News API looks like this:
 
@@ -163,7 +163,7 @@ The typical JSON response from News API looks like this:
 
 The exact structure of the JSON data is described in the `Response object` section on [News API Everything](https://newsapi.org/docs/endpoints/everything) :point_left:
 
-### Loading data from a text file :open_file_folder:
+### :open_file_folder: Loading data from a text file
 
 Here is an example of how you can load the file as a JSON object in Python.
 
@@ -174,7 +174,7 @@ with open('news_api_data.txt','r') as file:
     data = json.load(file)
 ```
 
-### Access information within the data :mag:
+### :mag: Access information within the data
 
 Now you can access each field as follows - the below uses `python-dateutil` package to parse the `publishedAt` attribute which is in ISO 8601 format.
 
