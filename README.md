@@ -11,8 +11,7 @@ Other data sources we've identified & assessed for ease of access/relevance
 # Current feasibility-tested hack question set
 
 ### TEXT ANALYSIS - (Correlation between GPG data and another source of text data at company level):
-* Recruitment bias in senior roles (data source: Reed)
-* Company ‘self’ description (data source: Reed)
+* What can we learn from job ads? (data source: Indeed)
 * Action plans as described in Company GPG reports (source links in the GPG company page)
 * Twitter #PayGap (company Level?)
 
