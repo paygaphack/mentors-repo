@@ -19,9 +19,6 @@ Other data sources we've identified & assessed for ease of access/relevance
 * Composition of the board (sources: Company House or company’s website)
 * Gender of the CEO (sources: Company House or company’s website)
 
-### CUSTOMER SERVICE:
-* Correlation between GPG and Customer Service Rating as available in TrustPilot
-
 ### DEEP DIVES:
 * What can we learn from the 11% of companies with a >0 pay gap?
 * Are the patterns different for Charitable organisations?
