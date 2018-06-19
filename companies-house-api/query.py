@@ -16,7 +16,7 @@ API_KEY = os.getenv('API_KEY')
 # Set some constants
 BASE_URL = 'https://api.companieshouse.gov.uk/company/'
 
-# Example company number
+# Example company number, needs to be 8 characters long. The first two characters might be SC, which designates Scotland
 company_num = '00000006'
 
 def pretty_print(data, indent=4):
