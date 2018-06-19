@@ -1,0 +1,80 @@
+{
+    "Company_Name": "MARINE AND GENERAL MUTUAL LIFE ASSURANCE SOCIETY",
+    "Company_Registration_Number": "00000006",
+    "Number_Active_Officers": 3,
+    "Names_Active_Officers": [
+        "PRINGLE, Martin",
+        "GALBRAITH, James",
+        "WALKER, Michael John"
+    ],
+    "Officers_Active_Full_Info": [
+        {
+            "address": {
+                "premises": "Cms Cameron Mckenna Llp",
+                "country": "England",
+                "locality": "London",
+                "address_line_2": "78 Cannon Street",
+                "address_line_1": "Cannon Place",
+                "postal_code": "EC4N 6AF"
+            },
+            "name": "PRINGLE, Martin",
+            "officer_role": "secretary",
+            "links": {
+                "officer": {
+                    "appointments": "/officers/1UUfj2gDv9ZVoykvoy9hhEhXDcY/appointments"
+                }
+            },
+            "appointed_on": "2016-09-13"
+        },
+        {
+            "occupation": "Company Director",
+            "address": {
+                "address_line_2": "78 Cannon Street",
+                "locality": "London",
+                "premises": "Cms Cameron Mckenna Llp",
+                "address_line_1": "Cannon Place",
+                "postal_code": "EC4N 6AF",
+                "country": "England"
+            },
+            "country_of_residence": "United Kingdom",
+            "links": {
+                "officer": {
+                    "appointments": "/officers/I-4OI1Rt7bqjbeWflGDl_s6KG6s/appointments"
+                }
+            },
+            "officer_role": "director",
+            "name": "GALBRAITH, James",
+            "date_of_birth": {
+                "year": 1963,
+                "month": 3
+            },
+            "appointed_on": "2015-03-01",
+            "nationality": "British"
+        },
+        {
+            "address": {
+                "locality": "London",
+                "country": "England",
+                "postal_code": "EC4N 6AF",
+                "address_line_2": "78 Cannon Street",
+                "address_line_1": "Cannon Place",
+                "premises": "Cms Cameron Mckenna Llp"
+            },
+            "occupation": "Company Director",
+            "links": {
+                "officer": {
+                    "appointments": "/officers/Z7im4wk4V9mVRJ06XtXntHRjihI/appointments"
+                }
+            },
+            "name": "WALKER, Michael John",
+            "officer_role": "director",
+            "appointed_on": "2015-06-01",
+            "date_of_birth": {
+                "year": 1952,
+                "month": 10
+            },
+            "nationality": "British",
+            "country_of_residence": "United Kingdom"
+        }
+    ]
+}
