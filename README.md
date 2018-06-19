@@ -5,6 +5,9 @@ Feel free to make directories/drop notes/scripts/docs etc. that you think would 
 This is the main data source, manual searchable UK Gov portal (beta, no API, Open Government License):   
 > https://gender-pay-gap.service.gov.uk/
 
+You can also download the gender pay gap data in a CSV (Comma Separated Values) format that can be read by any spreadsheet program or word processor:
+> https://gender-pay-gap.service.gov.uk/viewing/download
+
 Other data sources we've identified & assessed for ease of access/relevance
 > https://docs.google.com/spreadsheets/d/15dAZU3_t0mA2fX5WNxZToTVz0_PhTV7HAjG8lCZUezQ/edit#gid=0 
 
