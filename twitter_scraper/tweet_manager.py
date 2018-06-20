@@ -15,6 +15,9 @@ Tweet = collections.namedtuple(
 
 
 def _parse_tweet(html):
+    """Tweet parser.
+    Receives the html for a tweet and then identifies each portion with a corresponding argument.
+    """
     tweetPQ = PyQuery(html)
 
     # descifering every part of the html
@@ -70,6 +73,9 @@ def _parse_tweet(html):
 
 
 def _get_tweet_batch_html(config, refresh_cursor, cookie_jar, proxy):
+    """Scraper
+    Identifies the tweets portion from the html json file
+    """
     json = _get_json_response(config, refresh_cursor, cookie_jar, proxy)
 
     if len(json["items_html"].strip()) == 0:
@@ -82,6 +88,10 @@ def _get_tweet_batch_html(config, refresh_cursor, cookie_jar, proxy):
 
 
 def _get_json_response(config, refresh_cursor, cookie_jar, proxy):
+    """JSON builder.
+    Builds a URL from the arguments given by the user and gather a JSON file
+    from that URL.
+    """
     url = (
         "https://twitter.com/i/search/timeline?f=tweets&q=%s&src=typd&%smax_position=%s"
     )
@@ -107,7 +117,6 @@ def _get_json_response(config, refresh_cursor, cookie_jar, proxy):
     else:
         url_lang = ""
     url = url % (urllib.parse.quote(url_get_data), url_lang, refresh_cursor)
-    
 
     headers = [
         ("Host", "twitter.com"),
@@ -151,6 +160,11 @@ def _get_json_response(config, refresh_cursor, cookie_jar, proxy):
 
 
 def get_tweets(config, proxy=None):
+    """Tweets generator.
+    It receives the arguments parsed in 'search_tweets' and passes them to
+    the rest of the functions to obtain the tweets.
+    returns: generator
+    """
     # variable that mimics the scroll in the web
     refresh_cursor = ""
     # automatic handling of HTTP cookies

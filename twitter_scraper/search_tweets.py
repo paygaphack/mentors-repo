@@ -4,6 +4,7 @@ import json
 
 
 def main():
+    """Gathers the user's arguments and pass them to the tweet_manager to search for and build the tweets """
 
     try:
 
