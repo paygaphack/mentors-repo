@@ -51,7 +51,7 @@ def run():
 
         # Obtain next page from the API
         print('\nGrabbing page: ', current_page, '...')
-        response = requests.get(PAGE_SIZE, params=params)
+        response = requests.get(BASE_URL, params=params)
 
         # Printing status for debugging
         print('Received a response with status code: ', response.status_code)
