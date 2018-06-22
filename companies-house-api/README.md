@@ -91,19 +91,19 @@ Right, in order to start making queries, you need a bit of preparation to get yo
     If everything goes well, you should see the response printed out in the console and you should have a file called `all_officers_information.txt` which stores a dictionary of data holding active officers' information returned from the Companies House API for the company with the Company Registration Number "00000006".
     If you would like your file to match the company number, find the following commented out code in `all_officers_information.txt`:
     
-    ```python
-    # with open(company_num + '.txt', 'w') as file:
-    #     json.dump(company, file, indent=4)
-    # return company
-    ```
+```python
+# with open(company_num + '.txt', 'w') as file:
+#     json.dump(company, file, indent=4)
+# return company
+```
     
 Uncomment that code and comment out the code (below) stating:
 
-    ```python
-    with open('all_officers_information.txt', 'a') as file:
-        json.dump(company, file, indent=4)
-    return company   
-    ```
+```python
+with open('all_officers_information.txt', 'a') as file:
+    json.dump(company, file, indent=4)
+return company   
+```
     
 This is how you can change the filename that your data from your Companies House queries will be written in. As you make multiple queries to the Companies House API, querying for different data you will want to change the filename to enable new files to be created with names that reflect the data that they contain.
     
