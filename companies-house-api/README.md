@@ -91,7 +91,7 @@ Right, in order to start making queries, you need a bit of preparation to get yo
     If everything goes well, you should see the response printed out in the console and you should have a file called `all_officers_information.txt` which stores a dictionary of data holding active officers' information returned from the Companies House API for the company with the Company Registration Number "00000006".
     If you would like your file to match the company number, find the following commented out code in `all_officers_information.txt`:
     
-    ``` python
+    ```python
     # with open(company_num + '.txt', 'w') as file:
     #     json.dump(company, file, indent=4)
     # return company
@@ -99,7 +99,7 @@ Right, in order to start making queries, you need a bit of preparation to get yo
     
 Uncomment that code and comment out the code (below) stating:
 
-    ``` python
+    ```python
     with open('all_officers_information.txt', 'a') as file:
         json.dump(company, file, indent=4)
     return company
