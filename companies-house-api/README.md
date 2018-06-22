@@ -100,10 +100,11 @@ Right, in order to start making queries, you need a bit of preparation to get yo
 Uncomment that code and comment out the code (below) stating:
 
 ```python
-    with open('all_officers_information.txt', 'a') as file:
-        json.dump(company, file, indent=4)
-    return company   
+with open('all_officers_information.txt', 'a') as file:
+    json.dump(company, file, indent=4)
+return company   
 ```
+This is how you change the filename that your data from your Companies House queries will be written in. As you make multiple queries to the Companies House API, querying for different data you will want to change the filename enable new files to be created with names that reflect the data that contain.
     
 ## :three: Working with the Data
 
