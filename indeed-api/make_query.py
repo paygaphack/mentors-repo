@@ -3,6 +3,9 @@ import json
 import requests
 from time import sleep
 
+import sys
+import signal
+
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -26,6 +29,7 @@ def run():
         'userip': '1.2.3.4',
         'useragent': 'Mozilla/%2F4.0%28Firefox%29',
         'q': '*',
+        'jt': 'parttime',
         'sort': 'date',
         'format': 'json',
         'co': 'gb',
@@ -41,15 +45,20 @@ def run():
     print('Received a response with status code: ', response.status_code)
 
     # Extract the JSON representation of the response data
-    data = response.json()
+    raw_data = response.json()
 
     # Calculate total number of pages to paginate through
-    total_results = data['totalResults']
+    total_results = raw_data['totalResults']
     total_pages = calculate_total_pages(PAGE_SIZE, total_results)
     print('Total number of pages to paginate: ', total_pages, '\n')
 
+    job_keys = set([])
+    job_keys, jobs = extract_unique_jobs(job_keys, raw_data)
+
+    data = {'results': jobs}
+
     # Grab the rest of the articles by paginating 25 results at a time
-    while current_page < total_pages:
+    while len(data['results']) < 1000:
         # Increment current_page and set it to the page param
         current_page += 1
         params['start'] = current_page * 25
@@ -66,17 +75,29 @@ def run():
         if 'results' not in new_data:
             break
 
-        # Merge new articles to the obtained list of articles
-        new_articles = new_data['results']
-        data['results'].extend(new_articles)
+        job_keys, new_jobs = extract_unique_jobs(job_keys, new_data)
+        data['results'].extend(new_jobs)
 
     print('\nTotal number of articles obtained: ', len(data['results']))
 
     # Save the data into a file
     print('\nSaving the data into a file...')
-    with open('example.txt', 'w') as file:
+    with open('results.txt', 'w') as file:
         json.dump(data, file, indent=4)
-    print('\nData saved as example.txt!')
+    print('\nData saved as results.txt!')
+
+
+def extract_unique_jobs(job_keys, data):
+    jobs = []
+
+    for job in data['results']:
+        if job['jobkey'] not in job_keys:
+            job_keys.add(job['jobkey'])
+            jobs.append(job)
+        else:
+            pass
+
+    return (job_keys, jobs)
 
 
 def calculate_total_pages(page_size, total_results):
