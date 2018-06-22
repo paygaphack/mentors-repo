@@ -58,7 +58,7 @@ def run():
     data = {'results': jobs}
 
     # Grab the rest of the articles by paginating 25 results at a time
-    while len(data['results']) < 1000:
+    while len(data['results']) < 100:
         # Increment current_page and set it to the page param
         current_page += 1
         params['start'] = current_page * 25

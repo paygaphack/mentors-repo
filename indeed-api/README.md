@@ -83,8 +83,7 @@ Right, in order to start making queries, you need a bit of preparation to get yo
     PUBLISHER_ID="INSERT THE PUBLISHER ID PROVIDED BY THE GENDER PAY GAP HACK"
     ```
 
-9. Now you should be all ready to fire up a query :boom: `$ python make_query.py`
-    If everything goes well, you should see the response printed out in the console and you should have a file called `results.txt` which stores the JSON data from the News API :100:
+9. Now you should be all ready to fire up a query :boom: Be aware that by default `$      python make_query.py` will continue making requests until it collects 100 results, so change this number accoring to your needs. If everything goes well, you should see the response status printed out in the console and you should have a file called `results.txt` at the end, which stores the JSON data :100:
 
 #### :wrench: Customising a query - parameters
 
