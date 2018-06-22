@@ -99,11 +99,11 @@ Right, in order to start making queries, you need a bit of preparation to get yo
     
 Uncomment that code and comment out the code (below) stating:
 
-    ```python
+```python
     with open('all_officers_information.txt', 'a') as file:
         json.dump(company, file, indent=4)
-    return company
-    ```
+    return company   
+```
     
 ## :three: Working with the Data
 
