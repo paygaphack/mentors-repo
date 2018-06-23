@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>  Project Title </title>
+      <link href="styles.css" rel="stylesheet">
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+  </head>
+  <body>
+        <section id="header">
+            <h1><a href="http://127.0.0.1:8080/companies-house-api/charts/">Gender Pay Gap Hack</a></h1>
+        </section>
+        <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:8080/companies-house-api/charts/">Home/Questions</a></li>
+                    <li><a href="http://127.0.0.1:8080/companies-house-api/charts/charts.html">Charts</a></li>
+                </ul>
+            </nav>
+
+      <div id="wrapper">
+          
+        <section id="chart-nav">
+            <a href="http://127.0.0.1:8080/companies-house-api/charts/charts.html"><p>Gender ratio of directors</p></a>
+            <a href="http://127.0.0.1:8080/companies-house-api/charts/gender-pay.html"><p>Gender ratio of pay</p></a>
+            <a href="http://127.0.0.1:8080/companies-house-api/charts/correlation.html"><p>Correlation between pay gap and board ratio</p></a>
+        </section>
+
+    <section id="chart-header">
+            <h2>Gender ratio of company directors</h2>
+    </section>
+
+      <!-- <section>
+            <canvas id="myChart" width="400" height="400"></canvas>
+            <script>
+            var ctx = document.getElementById("myChart").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["Female", "Male"],
+                    datasets: [{
+                        label: 'Male v Female Base Pay',
+                        data: [50, 50],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    },{
+                        label: 'Male v Female Bonuses',
+                        data: [60, 40],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Male v Female Lower Quartile',
+                        data: [50, 50],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    },{
+                        label: 'Male v Female Lower-Middle Quartile',
+                        data: [10, 90],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    },{
+                        label: 'Male v Female Upper-Middle Quartile',
+                        data: [20, 80],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    },{
+                        label: 'Male v Female Top Quartile',
+                        data: [30, 70],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }
+
+                ]
+                },
+                
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+      </section> -->
+
+      <section>
+            <canvas id="myChart" width="400" height="400"></canvas>
+            <script>
+            var ctx = document.getElementById("myChart").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["Bonuses", "Lower Quartile", "Lower-Middle Quartile", "Upper-Middle Quartile", "Top Quartile"],
+                    datasets: [{
+					label: 'Female',
+					fill: false,
+					backgroundColor: 'red',
+					borderColor: 'red',
+					data: [
+						33.96, 53.60, 49.42, 45.07, 39.17
+					]
+				},{
+                    label: 'Male',
+					fill: false,
+					backgroundColor: 'blue',
+					borderColor: 'blue',
+					data: [
+					35.43, 46.40, 50.57, 54.93, 60.82
+					]
+                }]
+                },
+                
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+      </section>
+    </div>
+    <script type="text/javascript" src="script.js" ></script>
+     </div>
+  </body>
+</html>

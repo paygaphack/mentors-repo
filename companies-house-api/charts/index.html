@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <title>  Project Title </title>
+      <link href="styles.css" rel="stylesheet">
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+  </head>
+  <body>
+    <section id="header">
+        <h1><a href="http://127.0.0.1:8080/companies-house-api/charts/">Gender Pay Gap Hack</a></h1>
+    </section>
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:8080/companies-house-api/charts/">Home/Questions</a></li>
+            <li><a href="http://127.0.0.1:8080/companies-house-api/charts/charts.html">Charts</a></li>
+            <li><a href="http://127.0.0.1:8080/companies-house-api/charts/findings.html">Findings</a></li>
+        </ul>
+    </nav>
+
+    <div id="wrapper">
+      <section id="objective">
+        <h3>What was our objective?</h3>
+        <p>To analyse the listed directors of UK companies to find out what proportion were male / female</p>
+      </section>
+      <section id="methodology">
+        <h3>What was our methodology?</h3>
+        <p>The total size of the data-set was all companies registered with Companies House in the UK</p>
+        <p>We then narrowed this data-set to companies who were obliged to publish gender pay gap information.</p>
+        <p>This is a requirement for all companies with 250 or more employees</p>
+        <p>Some companies with fewer than 250 employess have voluntarily published this data, they have also been included</p>
+      </section>
+      <section id="questions">
+        <h2>Some questions to ask/consider</h2>
+
+        <div>
+            <h3>What is the size of the given data?</h3>
+            <p>10,513 companies</p>
+        </div>
+        <div>
+            <h3>Are we dealing with explicit numbers eg $xk per year or representative numbers?</h3>
+            <p>For company directors, we have access to specific numbers eg 10 directors, 5 males and 5 females</p>
+            <p>For pay data (salaries and bonuses), we have representative data.</p>
+            <p>For example, pay is divided into 4 quartiles, (lower, lower-middle, upper-middle and upper).</p>
+            <p>Companies will declare how many males ad </p>
+        </div>
+        <div>
+            <h3>What are the key data points given?</h3>
+            <ul>
+              <li>The total number of listed directors for each company</li>
+              <li>What proportion of listed directors are female</li>
+              <li>What proportion of listed directors are male</li>
+            </ul>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript" src="script.js" ></script>
+     </div>
+  </body>
+</html>

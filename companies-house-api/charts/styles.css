@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#header {
+  height: 100px;
+  width: 100%;
+  color: white;
+  background-color: navy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header > h1 > a {
+  color: white;
+  text-decoration: none;
+}
+
+#wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  margin-bottom: 40px;
+  background-color: #0f8edc;
+
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  margin: 0px;
+
+}
+
+nav > ul  {
+  height: 80px;
+}
+
+nav > ul > li {
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+nav > ul > li > a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+
+nav > ul > li > a:hover {
+  color: blue
+}
+
+li {
+  line-height: 40px;
+}
+
+#objective, #methodology {
+  margin-bottom: 40px;
+}
+
+/***********************************
+          Chart.html
+************************************/
+
+#chart-header {
+  margin-top: 60px;
+}
+
+#chart-nav {
+  display: flex;
+  justify-content: space-around;
+ 
+}
+
+#chart-nav > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#chart-nav > a {
+  text-decoration: none;
+}
+
+#myChart {
+  max-width: 80%;
+  margin: auto;
+  height: auto;
+}
